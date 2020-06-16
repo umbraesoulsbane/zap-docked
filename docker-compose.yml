@@ -5,6 +5,9 @@ services:
     zap:
         container_name: zap_docked
         image: owasp/zap2docker-stable
+        volumes: 
+            - ./assets/contexts:/home/zap/.ZAP/contexts
+            - ./assets/sessions:/home/zap/sessions
         ports:
             - 8080:8080
             - 8090:8090
