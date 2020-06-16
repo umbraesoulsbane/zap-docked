@@ -9,8 +9,10 @@ This is a skeleton project for working with Zap (https://www.zaproxy.org/), a we
 **Note:** This application has not been hardened or vulnerability tested and is not intended for production use.
 
 ## Folder Structure
-**/srv**
-- Custom configuration files to be copyed to container. 
-- Contains Dockerfiles and logs
+**/assets**
+- Local/Saved Sessions 
+- Local/Saved Contexts
 
 ## Usage
+Launch via web browser http://localhost:8080/zap/
+
