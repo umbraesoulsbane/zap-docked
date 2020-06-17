@@ -45,5 +45,9 @@ $RECYCLE.BIN/
 .env
 /assets/contexts/*
 /assets/sessions/*
+/assets/logs/*
+/assets/wrk/*
 !/assets/contexts/README.md
 !/assets/sessions/README.md
+!/assets/logs/README.md
+!/assets/wrk/README.md

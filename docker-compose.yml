@@ -8,8 +8,18 @@ services:
         volumes: 
             - ./assets/contexts:/home/zap/.ZAP/contexts
             - ./assets/sessions:/home/zap/sessions
+            - ./assets/logs:/home/zap/logs
+            - ./assets/wrk:/zap/wrk
         ports:
             - 8080:8080
             - 8090:8090
         command: "zap-webswing.sh"
 
+    juice:
+        container_name: juice_docked
+        image: bkimminich/juice-shop
+        ports:
+            - 3000:3000
+
+# zap-full-scan.py -t http://juice_docked:3000 -r testreport.html
+# docker run -v ./assets/wrk:/zap/wrk/:rw -t owasp/zap2docker-stable zap-full-scan.py -t http://juice_docked:3000 -g gen.conf -r testreport.html
